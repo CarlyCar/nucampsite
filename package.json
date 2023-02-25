@@ -6,10 +6,10 @@
   "scripts": {
     "lite": "lite-server",
     "scss": "node-sass -o css/ css/",
-    "imagemin": "imagemin img/* -o dist/img",
     "start": "npm run watch:all",
-    "clean": "rimraf dist",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "imagemin": "imagemin img/* -o dist/img",
+    "clean": "rimraf dist",
     "build": "npm run clean && npm run imagemin && npm run copyfonts && npm run usemin",
     "watch:scss": "onchange \"css/*.scss\" -- npm run scss",
     "watch:all": "parallelshell \"npm run watch:scss\" \"npm run lite\"",
